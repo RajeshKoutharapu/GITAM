@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Tab1 from '../tabs/tab1/tab1';
 import Tab2 from '../tabs/tab2/tab2';
@@ -10,13 +10,26 @@ import TabsNavbar from '../TabsNavbar/TabsNavbar';
 
 const Dashboard = () => {
   const location = useLocation();
-
   const currentTab = location.pathname.split('/').pop() || 'tab1';
+
+  // State for Tab1 data
+  const [standardsRows, setStandardsRows] = useState(0);
+  const [resolutionsRows, setResolutionsRows] = useState(0);
+  const [samplesRows, setSamplesRows] = useState(0);
 
   const renderTabContent = () => {
     switch (currentTab) {
       case 'tab1':
-        return <Tab1 />;
+        return (
+          <Tab1 
+            standardsRows={standardsRows} 
+            setStandardsRows={setStandardsRows} 
+            resolutionsRows={resolutionsRows} 
+            setResolutionsRows={setResolutionsRows} 
+            samplesRows={samplesRows} 
+            setSamplesRows={setSamplesRows} 
+          />
+        );
       case 'tab2':
         return <Tab2 />;
       case 'tab3':
