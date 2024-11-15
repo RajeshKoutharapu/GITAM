@@ -54,8 +54,10 @@ const Tab4 = () => {
             <div className="form-group">
                 <label htmlFor="instrumentPosi">Instrument Posi (Insitu):</label>
                 <select id="instrumentPosi">
-                    <option value="selectCase">Select Case</option>
-                    {/* Add more options as needed */}
+                    <option value="selectCase">In-Line</option>
+                    <option value="selectCase">On-Line</option>
+                    <option value="selectCase">At-Line</option>
+                    <option value="selectCase">Off-Line</option>
                 </select>
                 <button id="guide3">Guide 3</button>
             </div>
@@ -63,8 +65,11 @@ const Tab4 = () => {
             <div className="form-group">
                 <label htmlFor="samplePreparation">Sample Preparation:</label>
                 <select id="samplePreparation">
-                    <option value="selectCase">Select Case</option>
-                    {/* Add more options as needed */}
+                    <option value="selectCase">Case-1</option>
+                    <option value="selectCase">Case-2</option>
+                    <option value="selectCase">Case-3</option>
+                    <option value="selectCase">Case-4</option>
+                    <option value="selectCase">Case-5</option>
                 </select>
                 <button id="guide4">Guide 4</button>
             </div>
@@ -81,7 +86,11 @@ const Tab4 = () => {
             <div className="form-group">
                 <label htmlFor="wasteManagementSamples">Waste Management of Samples:</label>
                 <select id="wasteManagementSamples">
-                    <option value="selectCase">Select Case</option>
+                    <option value="selectCase">Reuse</option>
+                    <option value="selectCase">Recycling</option>
+                    <option value="selectCase">Degradations</option>
+                    <option value="selectCase">dispose</option>
+                    <option value="selectCase">No-treatment</option>
                     {/* Add more options as needed */}
                 </select>
                 <button id="guide6">Guide 6</button>
@@ -90,7 +99,11 @@ const Tab4 = () => {
             <div className="form-group">
                 <label htmlFor="wasteManagementOthers">Waste Management of Others:</label>
                 <select id="wasteManagementOthers">
-                    <option value="selectCase">Select Case</option>
+                <option value="selectCase">Reuse</option>
+                    <option value="selectCase">Recycling</option>
+                    <option value="selectCase">Degradations</option>
+                    <option value="selectCase">dispose</option>
+                    <option value="selectCase">No-treatment</option>
                     {/* Add more options as needed */}
                 </select>
                 <button id="guide7">Guide 7</button>

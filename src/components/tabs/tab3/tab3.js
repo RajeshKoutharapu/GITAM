@@ -19,7 +19,7 @@ const Tab3 = () => {
     }
   };
 
-  const createTable = (title, headers, inputTypes, dropdownOptions) => {
+  const createTable = (title, headers, inputTypes, ...dropdownOptions) => {
     return (
       <table className="chemical-table">
         {/* Table title */}
@@ -44,7 +44,8 @@ const Tab3 = () => {
                     <input type="text" />
                   ) : (
                     <select>
-                      {dropdownOptions.map((option, idx) => (
+                      {/* Use different options for each dropdown based on the column index */}
+                      {dropdownOptions[colIndex - 1]?.map((option, idx) => (
                         <option key={idx} value={option}>
                           {option}
                         </option>
@@ -59,7 +60,7 @@ const Tab3 = () => {
       </table>
     );
   };
-
+  
   const openGuide = () => setShowModal(true);
   const closeGuide = () => setShowModal(false);
 
@@ -88,22 +89,25 @@ const Tab3 = () => {
             'NFPA Health',
             ['Name', 'NFPA Health Value', 'in %'],
             ['input', 'dropdown', 'input'],
-            ['1', '2', '3', '4']
+            ['0','1', '2', '3', '4']
           )}
           {createTable(
             'NFPA Flammability',
             ['Name', 'NFPA Flammability Value', 'in %'],
             ['input', 'dropdown', 'input'],
-            ['1', '2', '3', '4']
+            ['0','1', '2', '3', '4']
           )}
           {createTable(
             'Physical Hazard',
             ['Name', 'Physical Hazard', 'Signal Word'],
-            ['input', 'input', 'dropdown'],
-            ['Warning', 'Danger']
+            ['input', 'dropdown', 'dropdown'],
+            ['N/A','W','OX','SA'],
+            ['not mentioned','caution','warning','Danger']
           )}
+         
         </div>
       )}
+
 
       {/* Navigation Footer */}
       <footer>

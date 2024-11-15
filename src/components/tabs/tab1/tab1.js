@@ -27,9 +27,12 @@ const Tab1 = () => {
         <td><input type="text" className="form-control" placeholder="Volume of solution consumed in mL" /></td>
         <td>
           <select className="form-select">
-            <option value="sample1">Sample 1</option>
-            <option value="sample2">Sample 2</option>
-            <option value="sample3">Sample 3</option>
+            <option value="sample1">None</option>
+            <option value="sample2">Sedimentation</option>
+            <option value="sample3">Centrifuge</option>
+            <option value="sample3">Centrifuge</option>
+            <option value="sample3">Membrane filtrtaion</option>
+            <option value="sample3">Centrifuge + filtrtation</option>
           </select>
         </td>
       </tr>
